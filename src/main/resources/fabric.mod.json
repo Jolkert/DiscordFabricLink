@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "discord-bot-link",
+	"version": "${version}",
+	
+	"name": "Discord Bot Link",
+	"description": "Discord bot mod",
+	"authors": [
+		"Jolkert"
+	],
+	"contact": {},
+	
+	"license": "MIT",
+	"icon": "assets/discord-bot-link/icon.png",
+	
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"jolkert.discordbotlink.DiscordBotLink"
+		]
+	},
+	
+	"mixins": [
+		"discord-bot-link.mixins.json"
+	],
+	
+	"depends": {
+		"fabricloader": ">=0.14.6",
+		"fabric": "*",
+		"minecraft": "~1.19-beta.4"
+	}
+}

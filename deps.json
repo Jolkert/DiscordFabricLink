@@ -1,0 +1,1820 @@
+[
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.dv8tion",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "5.0.0-alpha.12",
+        "name": "JDA",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.squareup.okhttp3",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.9.3",
+        "name": "okhttp",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.squareup.okio",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.8.0",
+        "name": "okio",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains.kotlin",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.10",
+        "name": "kotlin-stdlib",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "23.0.0",
+        "name": "annotations",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.google.code.findbugs",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.2",
+        "name": "jsr305",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.slf4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.7.36",
+        "name": "slf4j-api",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.neovisionaries",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.14",
+        "name": "nv-websocket-client",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.apache.commons",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.4",
+        "name": "commons-collections4",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains.kotlin",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.10",
+        "name": "kotlin-stdlib-common",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.dv8tion",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "5.0.0-alpha.12",
+        "name": "JDA",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.14.6",
+        "name": "fabric-loader",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.55.1+1.19",
+        "name": "fabric-api",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.sf.trove4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.3",
+        "name": "trove4j",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.fasterxml.jackson.core",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.13.2",
+        "name": "jackson-annotations",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.fasterxml.jackson.core",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.13.2.2",
+        "name": "jackson-databind",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.fasterxml.jackson.core",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.13.2",
+        "name": "jackson-core",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.google.code.findbugs",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.2",
+        "name": "jsr305",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.squareup.okhttp3",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.9.3",
+        "name": "okhttp",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.squareup.okio",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.8.0",
+        "name": "okio",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains.kotlin",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.10",
+        "name": "kotlin-stdlib",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "23.0.0",
+        "name": "annotations",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.slf4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.7.36",
+        "name": "slf4j-api",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.neovisionaries",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.14",
+        "name": "nv-websocket-client",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.apache.commons",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.4",
+        "name": "commons-collections4",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.7+e62f51a357",
+        "name": "fabric-transfer-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.6.5+9ff28f4057",
+        "name": "fabric-api-lookup-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.1.17+9ff28f4057",
+        "name": "fabric-blockrenderlayer-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.1+e62f51a357",
+        "name": "fabric-command-api-v2",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.15+9ff28f4057",
+        "name": "fabric-content-registries-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.7+37622d2457",
+        "name": "fabric-convention-tags-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "5.0.0+2a5b921057",
+        "name": "fabric-data-generation-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.1.26+72da3b3d57",
+        "name": "fabric-dimensions-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.15+9ff28f4057",
+        "name": "fabric-entity-events-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.4.25+9ff28f4057",
+        "name": "fabric-events-interaction-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.29+e62f51a357",
+        "name": "fabric-gametest-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.5.3+767db26e57",
+        "name": "fabric-item-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.3.22+9ff28f4057",
+        "name": "fabric-item-groups-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.8+21a5acaa57",
+        "name": "fabric-lifecycle-events-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.0+9e7660c657",
+        "name": "fabric-loot-api-v2",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.0+513f4a5957",
+        "name": "fabric-message-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.1.6+9ff28f4057",
+        "name": "fabric-mining-level-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.3.14+9ff28f4057",
+        "name": "fabric-models-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.9.15+92cf9a3e57",
+        "name": "fabric-registry-sync-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.2.5+9ff28f4057",
+        "name": "fabric-screen-handler-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.26+7fe9740957",
+        "name": "fabric-networking-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.0.4+9ff28f4057",
+        "name": "fabric-object-builder-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.7+9ff28f4057",
+        "name": "fabric-particles-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.6.5+9ff28f4057",
+        "name": "fabric-renderer-indigo",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.7+9ff28f4057",
+        "name": "fabric-renderer-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.3.11+9ff28f4057",
+        "name": "fabric-rendering-data-attachment-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.4+9ff28f4057",
+        "name": "fabric-rendering-fluids-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.10.13+9ff28f4057",
+        "name": "fabric-rendering-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.22+9ff28f4057",
+        "name": "fabric-screen-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.17+9ff28f4057",
+        "name": "fabric-textures-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.4.8+e62f51a357",
+        "name": "fabric-api-base",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "9.0.11+e62f51a357",
+        "name": "fabric-biome-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.2.2+bd0a0d4a57",
+        "name": "fabric-crash-report-info-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.18+1899036157",
+        "name": "fabric-game-rule-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.17+9ff28f4057",
+        "name": "fabric-key-binding-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.8+e62f51a357",
+        "name": "fabric-resource-conditions-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.5.2+9e7660c657",
+        "name": "fabric-resource-loader-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.1.0+9e7660c657",
+        "name": "fabric-transitive-access-wideners-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains.kotlin",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.10",
+        "name": "kotlin-stdlib-common",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.dv8tion",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "5.0.0-alpha.12",
+        "name": "JDA",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.2.1+build.8",
+        "name": "dev-launch-injector",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.minecrell",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.2.0",
+        "name": "terminalconsoleappender",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.apache.logging.log4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.8.1",
+        "name": "log4j-core",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jline",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.12.1",
+        "name": "jline-reader",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.apache.logging.log4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.8.1",
+        "name": "log4j-api",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jline",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.12.1",
+        "name": "jline-terminal",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc",
+        "originalClassName": "Dep",
+        "classifier": "v2",
+        "version": "1.19-rc2+build.1",
+        "name": "yarn",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.14.6",
+        "name": "fabric-loader",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.55.1+1.19",
+        "name": "fabric-api",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.7+e62f51a357",
+        "name": "fabric-transfer-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.6.5+9ff28f4057",
+        "name": "fabric-api-lookup-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.1.17+9ff28f4057",
+        "name": "fabric-blockrenderlayer-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.1+e62f51a357",
+        "name": "fabric-command-api-v2",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.15+9ff28f4057",
+        "name": "fabric-content-registries-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.7+37622d2457",
+        "name": "fabric-convention-tags-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "5.0.0+2a5b921057",
+        "name": "fabric-data-generation-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.1.26+72da3b3d57",
+        "name": "fabric-dimensions-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.15+9ff28f4057",
+        "name": "fabric-entity-events-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.4.25+9ff28f4057",
+        "name": "fabric-events-interaction-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.29+e62f51a357",
+        "name": "fabric-gametest-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.5.3+767db26e57",
+        "name": "fabric-item-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.3.22+9ff28f4057",
+        "name": "fabric-item-groups-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.8+21a5acaa57",
+        "name": "fabric-lifecycle-events-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.0+9e7660c657",
+        "name": "fabric-loot-api-v2",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.0+513f4a5957",
+        "name": "fabric-message-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.1.6+9ff28f4057",
+        "name": "fabric-mining-level-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.3.14+9ff28f4057",
+        "name": "fabric-models-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.9.15+92cf9a3e57",
+        "name": "fabric-registry-sync-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.2.5+9ff28f4057",
+        "name": "fabric-screen-handler-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.26+7fe9740957",
+        "name": "fabric-networking-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.0.4+9ff28f4057",
+        "name": "fabric-object-builder-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.7+9ff28f4057",
+        "name": "fabric-particles-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.6.5+9ff28f4057",
+        "name": "fabric-renderer-indigo",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.7+9ff28f4057",
+        "name": "fabric-renderer-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.3.11+9ff28f4057",
+        "name": "fabric-rendering-data-attachment-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.4+9ff28f4057",
+        "name": "fabric-rendering-fluids-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.10.13+9ff28f4057",
+        "name": "fabric-rendering-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.22+9ff28f4057",
+        "name": "fabric-screen-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.17+9ff28f4057",
+        "name": "fabric-textures-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.4.8+e62f51a357",
+        "name": "fabric-api-base",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "9.0.11+e62f51a357",
+        "name": "fabric-biome-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.2.2+bd0a0d4a57",
+        "name": "fabric-crash-report-info-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.18+1899036157",
+        "name": "fabric-game-rule-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.17+9ff28f4057",
+        "name": "fabric-key-binding-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.8+e62f51a357",
+        "name": "fabric-resource-conditions-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.5.2+9e7660c657",
+        "name": "fabric-resource-loader-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.1.0+9e7660c657",
+        "name": "fabric-transitive-access-wideners-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.14.6",
+        "name": "fabric-loader",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.55.1+1.19",
+        "name": "fabric-api",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.7+e62f51a357",
+        "name": "fabric-transfer-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.6.5+9ff28f4057",
+        "name": "fabric-api-lookup-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.1.17+9ff28f4057",
+        "name": "fabric-blockrenderlayer-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.1+e62f51a357",
+        "name": "fabric-command-api-v2",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.15+9ff28f4057",
+        "name": "fabric-content-registries-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.7+37622d2457",
+        "name": "fabric-convention-tags-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "5.0.0+2a5b921057",
+        "name": "fabric-data-generation-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.1.26+72da3b3d57",
+        "name": "fabric-dimensions-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.15+9ff28f4057",
+        "name": "fabric-entity-events-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.4.25+9ff28f4057",
+        "name": "fabric-events-interaction-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.29+e62f51a357",
+        "name": "fabric-gametest-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.5.3+767db26e57",
+        "name": "fabric-item-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.3.22+9ff28f4057",
+        "name": "fabric-item-groups-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.8+21a5acaa57",
+        "name": "fabric-lifecycle-events-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.0+9e7660c657",
+        "name": "fabric-loot-api-v2",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.0+513f4a5957",
+        "name": "fabric-message-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.1.6+9ff28f4057",
+        "name": "fabric-mining-level-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.3.14+9ff28f4057",
+        "name": "fabric-models-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.9.15+92cf9a3e57",
+        "name": "fabric-registry-sync-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.2.5+9ff28f4057",
+        "name": "fabric-screen-handler-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.26+7fe9740957",
+        "name": "fabric-networking-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.0.4+9ff28f4057",
+        "name": "fabric-object-builder-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.7+9ff28f4057",
+        "name": "fabric-particles-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.6.5+9ff28f4057",
+        "name": "fabric-renderer-indigo",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.7+9ff28f4057",
+        "name": "fabric-renderer-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.3.11+9ff28f4057",
+        "name": "fabric-rendering-data-attachment-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.4+9ff28f4057",
+        "name": "fabric-rendering-fluids-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.10.13+9ff28f4057",
+        "name": "fabric-rendering-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.22+9ff28f4057",
+        "name": "fabric-screen-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.17+9ff28f4057",
+        "name": "fabric-textures-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.4.8+e62f51a357",
+        "name": "fabric-api-base",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "9.0.11+e62f51a357",
+        "name": "fabric-biome-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.2.2+bd0a0d4a57",
+        "name": "fabric-crash-report-info-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.18+1899036157",
+        "name": "fabric-game-rule-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.0.17+9ff28f4057",
+        "name": "fabric-key-binding-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.0.8+e62f51a357",
+        "name": "fabric-resource-conditions-api-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.5.2+9e7660c657",
+        "name": "fabric-resource-loader-v0",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc.fabric-api",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.1.0+9e7660c657",
+        "name": "fabric-transitive-access-wideners-v1",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.dv8tion",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "5.0.0-alpha.12",
+        "name": "JDA",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.2.1+build.8",
+        "name": "dev-launch-injector",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.minecrell",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.2.0",
+        "name": "terminalconsoleappender",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.sf.trove4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.3",
+        "name": "trove4j",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.fasterxml.jackson.core",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.13.2",
+        "name": "jackson-annotations",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.fasterxml.jackson.core",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.13.2.2",
+        "name": "jackson-databind",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.fasterxml.jackson.core",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.13.2",
+        "name": "jackson-core",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.google.code.findbugs",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.2",
+        "name": "jsr305",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.squareup.okhttp3",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.9.3",
+        "name": "okhttp",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.squareup.okio",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.8.0",
+        "name": "okio",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains.kotlin",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.10",
+        "name": "kotlin-stdlib",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "23.0.0",
+        "name": "annotations",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.slf4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.7.36",
+        "name": "slf4j-api",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.neovisionaries",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.14",
+        "name": "nv-websocket-client",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.apache.commons",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.4",
+        "name": "commons-collections4",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.apache.logging.log4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.8.1",
+        "name": "log4j-core",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jline",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.12.1",
+        "name": "jline-reader",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.apache.logging.log4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.8.1",
+        "name": "log4j-api",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jline",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.12.1",
+        "name": "jline-terminal",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains.kotlin",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.10",
+        "name": "kotlin-stdlib-common",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.dv8tion",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "5.0.0-alpha.12",
+        "name": "JDA",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.google.code.findbugs",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.2",
+        "name": "jsr305",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.squareup.okhttp3",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.9.3",
+        "name": "okhttp",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.squareup.okio",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.8.0",
+        "name": "okio",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains.kotlin",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.10",
+        "name": "kotlin-stdlib",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "23.0.0",
+        "name": "annotations",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.slf4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.7.36",
+        "name": "slf4j-api",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.neovisionaries",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.14",
+        "name": "nv-websocket-client",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.apache.commons",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.4",
+        "name": "commons-collections4",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains.kotlin",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.10",
+        "name": "kotlin-stdlib-common",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.dv8tion",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "5.0.0-alpha.12",
+        "name": "JDA",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.fabricmc",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "0.2.1+build.8",
+        "name": "dev-launch-injector",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.minecrell",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.2.0",
+        "name": "terminalconsoleappender",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "net.sf.trove4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.3",
+        "name": "trove4j",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.fasterxml.jackson.core",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.13.2",
+        "name": "jackson-annotations",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.fasterxml.jackson.core",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.13.2.2",
+        "name": "jackson-databind",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.fasterxml.jackson.core",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.13.2",
+        "name": "jackson-core",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.google.code.findbugs",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.0.2",
+        "name": "jsr305",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.squareup.okhttp3",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.9.3",
+        "name": "okhttp",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.squareup.okio",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.8.0",
+        "name": "okio",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains.kotlin",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.10",
+        "name": "kotlin-stdlib",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "23.0.0",
+        "name": "annotations",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.slf4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.7.36",
+        "name": "slf4j-api",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "com.neovisionaries",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.14",
+        "name": "nv-websocket-client",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.apache.commons",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "4.4",
+        "name": "commons-collections4",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.apache.logging.log4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.8.1",
+        "name": "log4j-core",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jline",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.12.1",
+        "name": "jline-reader",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.apache.logging.log4j",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "2.8.1",
+        "name": "log4j-api",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jline",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "3.12.1",
+        "name": "jline-terminal",
+        "extention": "jar"
+    },
+    {
+        "contentHash": "4bf5721c9e78c70d141f92d988e9b431",
+        "group": "org.jetbrains.kotlin",
+        "originalClassName": "Dep",
+        "classifier": null,
+        "version": "1.4.10",
+        "name": "kotlin-stdlib-common",
+        "extention": "jar"
+    }
+]
