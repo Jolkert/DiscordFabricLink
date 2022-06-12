@@ -4,10 +4,11 @@
 	"package": "jolkert.discordbotlink.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"MinecraftServerMixin",
+		"CreeperEntityMixin",
 		"EntityMixin",
-		"PlayerManagerMixin",
-		"MessageCommandMixin"
+		"MessageCommandMixin",
+		"MinecraftDedicatedServerMixin",
+		"PlayerManagerMixin"
 	],
 	"client": [
 	],

@@ -1,7 +1,7 @@
 package jolkert.discordbotlink.jda;
 
-import com.mojang.authlib.GameProfile;
 import jolkert.discordbotlink.DiscordBotLink;
+import jolkert.discordbotlink.data.UserDataHolder;
 import jolkert.discordbotlink.jda.config.*;
 import jolkert.discordbotlink.jda.listener.CommandHandler;
 import jolkert.discordbotlink.jda.listener.UserUpdateListener;
@@ -16,10 +16,7 @@ import net.dv8tion.jda.api.utils.concurrent.Task;
 import net.fabricmc.loader.api.FabricLoader;
 
 import javax.security.auth.login.LoginException;
-import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class DiscordBot extends ListenerAdapter
 {
@@ -30,7 +27,7 @@ public class DiscordBot extends ListenerAdapter
 	private static final String FILE_PATH = FabricLoader.getInstance().getConfigDir().toString() + "/DiscordBotLink/user_data.json";
 	
 	
-	public DiscordBot(BotConfig config) throws LoginException, InterruptedException
+	public DiscordBot(BotConfig config) throws LoginException
 	{
 		jda = JDABuilder.createLight(config.token(), GatewayIntent.getIntents(GatewayIntent.ALL_INTENTS))
 				.addEventListeners(new CommandHandler(config.prefix()), this, new UserUpdateListener())

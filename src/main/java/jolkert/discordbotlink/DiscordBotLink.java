@@ -18,6 +18,8 @@ public class DiscordBotLink implements ModInitializer
 	public static final Logger Logger = LogUtils.getLogger();
 	public static DiscordBot Bot;
 	
+	public static final String DEFAULT_PREFIX = "!";
+	
 	@Override
 	public void onInitialize()
 	{
@@ -46,13 +48,7 @@ public class DiscordBotLink implements ModInitializer
 			{
 				Logger.error("COULD NOT LOG IN BOT", exception);
 			}
-			catch (InterruptedException e)
-			{
-				throw new RuntimeException(e);
-			}
 		}
-		
-		
 	}
 	
 	public static BotConfig loadConfig() throws IOException
@@ -61,15 +57,19 @@ public class DiscordBotLink implements ModInitializer
 		File file = new File(filePath);
 		
 		BotConfig config;
+		
+		
+		
 		if (file.createNewFile())
 		{
+			Properties properties = new Properties();
+			properties.setProperty("token", "");
+			properties.setProperty("prefix", DEFAULT_PREFIX);
 			PrintWriter writer = new PrintWriter(file);
-			writer.println("# Config for DiscordBotLink");
-			writer.println("token=");
-			writer.println("prefix=!");
+			properties.store(writer, "Config for DiscordBotLink");
 			writer.close();
 			
-			config = new BotConfig("", "!");
+			config = new BotConfig("", DEFAULT_PREFIX);
 		}
 		else
 		{
@@ -78,7 +78,7 @@ public class DiscordBotLink implements ModInitializer
 			properties.load(inputStream);
 			
 			String token = properties.getProperty("token", "");
-			String prefix = properties.getProperty("prefix", "!");
+			String prefix = properties.getProperty("prefix", DEFAULT_PREFIX);
 			
 			inputStream.close();
 			config = new BotConfig(token, prefix);

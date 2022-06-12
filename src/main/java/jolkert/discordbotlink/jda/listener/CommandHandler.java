@@ -4,7 +4,7 @@ import jolkert.discordbotlink.DiscordBotLink;
 import jolkert.discordbotlink.jda.command.DiscordCommand;
 import jolkert.discordbotlink.jda.command.PingCommand;
 import jolkert.discordbotlink.jda.command.WhitelistCommand;
-import net.dv8tion.jda.api.entities.User;
+import jolkert.discordbotlink.util.NameUtils;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -37,7 +37,7 @@ public class CommandHandler extends ListenerAdapter
 			String[] args = event.getMessage().getContentRaw().substring(prefix.length()).split(" ");
 			args[0] = args[0].toLowerCase();
 			
-			DiscordBotLink.Logger.info(nameWithDiscriminator(event.getAuthor()) + " attempting to run [" + args[0] + "]");
+			DiscordBotLink.Logger.info(NameUtils.nameWithDiscriminator(event.getAuthor()) + " attempting to run [" + args[0] + "]");
 			if (commandMap.containsKey(args[0]))
 			{
 				DiscordCommand command = commandMap.get(args[0]);
@@ -53,10 +53,5 @@ public class CommandHandler extends ListenerAdapter
 	private static boolean containsPrefix(String content, String prefix)
 	{// TODO: eventually make this check for a mention prefix too
 		return content.startsWith(prefix);
-	}
-	
-	private static String nameWithDiscriminator(User user)
-	{
-		return user.getName() + "#" + user.getDiscriminator();
 	}
 }

@@ -2,7 +2,7 @@ package jolkert.discordbotlink.jda.command;
 
 import com.mojang.authlib.GameProfile;
 import jolkert.discordbotlink.DiscordBotLink;
-import jolkert.discordbotlink.jda.config.UserData;
+import jolkert.discordbotlink.data.UserData;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;

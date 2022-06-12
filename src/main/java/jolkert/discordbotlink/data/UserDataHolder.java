@@ -1,9 +1,10 @@
-package jolkert.discordbotlink.jda.config;
+package jolkert.discordbotlink.data;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mojang.authlib.GameProfile;
 import jolkert.discordbotlink.DiscordBotLink;
+import jolkert.discordbotlink.util.NameUtils;
 import net.dv8tion.jda.api.entities.User;
 
 import java.io.*;
@@ -78,7 +79,10 @@ public class UserDataHolder
 	{
 		UserData data = getUser(discordUser);
 		if (data != null)
+		{
+			DiscordBotLink.Logger.info("Updating user info for " + NameUtils.nameWithDiscriminator(discordUser));
 			data.setRoleInfo(RoleInfo.of(discordUser));
+		}
 		
 		writeJson();
 	}

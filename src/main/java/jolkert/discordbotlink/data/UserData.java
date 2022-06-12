@@ -1,10 +1,12 @@
-package jolkert.discordbotlink.jda.config;
+package jolkert.discordbotlink.data;
 
 import com.mojang.authlib.GameProfile;
+import jolkert.discordbotlink.util.NameUtils;
 import net.dv8tion.jda.api.entities.User;
 
 import java.util.UUID;
 
+@SuppressWarnings("FieldMayBeFinal") // anger -jolk 2022-06-12
 public class UserData
 {
 	private MinecraftData minecraftData;
@@ -22,7 +24,7 @@ public class UserData
 	{
 		MinecraftData minecraftData = new MinecraftData(new UUID(data.minecraftData.uuid.getMostSignificantBits(), data.minecraftData.uuid.getLeastSignificantBits()), data.minecraftData.name);
 		DiscordData discordData = new DiscordData(data.discordData.id, data.discordData.name);
-		RoleInfo roleInfo = new RoleInfo(data.roleInfo.getTopColor(), data.roleInfo.getPronouns());
+		RoleInfo roleInfo = new RoleInfo(data.roleInfo.getTopColor(), data.roleInfo.getPronouns(), data.roleInfo.getNickname());
 		
 		this.minecraftData = minecraftData;
 		this.discordData = discordData;
@@ -64,8 +66,15 @@ public class UserData
 		this.roleInfo = roleInfo;
 	}
 	
+	public String getHoverText()
+	{
+		
+		return (roleInfo.getPronouns() + "\n" + NameUtils.nicknameWithUsername(this)).trim();
+	}
+	
 	
 	// yea intellij. i know i can make those fields final. but the gson ez deserializer doesnt like that -jolk 2022-06-06
+	
 	public static class MinecraftData
 	{
 		private UUID uuid;
@@ -107,7 +116,7 @@ public class UserData
 		
 		public DiscordData(User user)
 		{
-			this(user.getId(), user.getName() + "#" + user.getDiscriminator());
+			this(user.getId(), NameUtils.nameWithDiscriminator(user));
 		}
 		
 		public String getId()

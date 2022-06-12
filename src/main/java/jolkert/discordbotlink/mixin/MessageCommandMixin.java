@@ -15,18 +15,17 @@ import java.util.Collection;
 import java.util.List;
 
 @Mixin(MessageCommand.class)
-// @Environment(EnvType.SERVER)
 public class MessageCommandMixin
 {
 	@Inject(at = @At("TAIL"), method = "execute")//, locals = LocalCapture.CAPTURE_FAILSOFT)
 	private static void logMessageToConsole(ServerCommandSource source, Collection<ServerPlayerEntity> targets, MessageArgumentType.SignedMessage signedMessage, CallbackInfoReturnable<Integer> cir)
 	{
+		String sender = source.getName();
+		if (sender == null || sender.isEmpty())
+			return;
+		
 		List<ServerPlayerEntity> players = new ArrayList<>(targets);
-		System.out.println("TARGETS: " + targets.size() + "\nPLAYERS: " + targets.size());
-		
 		for (ServerPlayerEntity player : players)
-			DiscordBotLink.Logger.info(player.getName().getString());
-		
-		DiscordBotLink.Logger.info(signedMessage.plain());
+			DiscordBotLink.Logger.info("Private Message: [" + sender + "->" + player.getName().getString() + "] " + signedMessage.plain());
 	}
 }
