@@ -26,6 +26,6 @@ public class MessageCommandMixin
 		
 		List<ServerPlayerEntity> players = new ArrayList<>(targets);
 		for (ServerPlayerEntity player : players)
-			DiscordBotLink.Logger.info("Private Message: [" + sender + "->" + player.getName().getString() + "] " + signedMessage.plain());
+			DiscordBotLink.Logger.info("Whisper: [" + sender + " -> " + player.getName().getString() + "] " + signedMessage.plain());
 	}
 }
