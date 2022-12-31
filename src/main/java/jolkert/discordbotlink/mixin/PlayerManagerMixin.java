@@ -34,11 +34,6 @@ public class PlayerManagerMixin
 				.withClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/msg " + params.name().getString()));
 
 		MutableText styledName = MutableText.of(params.name().getContent()).setStyle(style);
-		params = new MessageType.Parameters(params.type(), styledName, params.targetName());
-
-		System.out.println(params.name().getString());
-
-
-		return params;
+		return new MessageType.Parameters(params.type(), styledName, params.targetName());
 	}
 }
