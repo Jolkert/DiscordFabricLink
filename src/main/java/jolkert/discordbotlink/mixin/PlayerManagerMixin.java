@@ -21,10 +21,9 @@ public class PlayerManagerMixin
 			index = 2)
 	public MessageType.Parameters addHoverTextToSender(SentMessage message, boolean bool, MessageType.Parameters params)
 	{
-		if (!(message instanceof SentMessage.Chat))
+		if (!(message instanceof SentMessage.Chat chatMessage))
 			return params;
 
-		SentMessage.Chat chatMessage = (SentMessage.Chat) message;
 		UserData data = DiscordBotLink.Bot.getUserData().getUser(chatMessage.message().getSender());
 
 		if (data == null)
