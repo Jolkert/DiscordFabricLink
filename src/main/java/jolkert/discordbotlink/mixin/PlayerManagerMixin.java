@@ -12,10 +12,8 @@ import net.minecraft.text.*;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.ModifyArg;
-import org.spongepowered.asm.mixin.injection.ModifyArgs;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
 import java.util.function.Predicate;
@@ -39,5 +37,29 @@ public class PlayerManagerMixin
 								 .withClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "/msg " + params.name().getString()));
 		MutableText styledName = MutableText.of(params.name().getContent()).setStyle(style);
 		return new MessageType.Parameters(params.type(), styledName, params.targetName());
+	}
+
+	@Inject(
+			method = "broadcast(Lnet/minecraft/network/message/SignedMessage;Lnet/minecraft/server/network/ServerPlayerEntity;Lnet/minecraft/network/message/MessageType$Parameters;)V",
+			at = @At("HEAD")
+	)
+	public void broadcastChatToDiscord(SignedMessage message, ServerPlayerEntity sender, MessageType.Parameters params, CallbackInfo ci)
+	{
+		sendDiscordMessage("<" + sender.getName().getString() + "> " + message.getContent().getString());
+	}
+
+	@Inject(
+			method = "broadcast(Lnet/minecraft/text/Text;Z)V",
+			at = @At("HEAD")
+	)
+	public void broadcastChatToDiscord(Text message, boolean overlay, CallbackInfo ci)
+	{
+		if (!message.getString().startsWith("[Server/"))
+			sendDiscordMessage("*" + message.getString() + "*");
+	}
+
+	private void sendDiscordMessage(String message)
+	{
+		DiscordBotLink.Bot.getLinkChannel().sendMessage(message).queue();
 	}
 }

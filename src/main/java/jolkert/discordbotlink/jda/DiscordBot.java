@@ -4,6 +4,7 @@ import jolkert.discordbotlink.DiscordBotLink;
 import jolkert.discordbotlink.data.UserDataHolder;
 import jolkert.discordbotlink.jda.config.*;
 import jolkert.discordbotlink.jda.listener.CommandHandler;
+import jolkert.discordbotlink.jda.listener.LinkChannelListener;
 import jolkert.discordbotlink.jda.listener.UserUpdateListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -23,19 +24,23 @@ public class DiscordBot extends ListenerAdapter
 	private JDA jda;
 	private final UserDataHolder userData;
 	public Guild primaryGuild;
-	
+	private final BotConfig config;
+
+	private TextChannel linkChannel = null;
+
 	private static final String FILE_PATH = FabricLoader.getInstance().getConfigDir().toString() + "/DiscordBotLink/user_data.json";
 	
 	
 	public DiscordBot(BotConfig config) throws LoginException
 	{
 		jda = JDABuilder.createLight(config.token(), GatewayIntent.getIntents(GatewayIntent.ALL_INTENTS))
-				.addEventListeners(new CommandHandler(config.prefix()), this, new UserUpdateListener())
+				.addEventListeners(new CommandHandler(config.prefix()), this, new UserUpdateListener(), new LinkChannelListener())
 				.setActivity(Activity.playing("Prefix: " + config.prefix()))
 				.setMemberCachePolicy(MemberCachePolicy.ALL)
 				.build();
 		
 		userData = new UserDataHolder(FILE_PATH);
+		this.config = config;
 	}
 	
 	public UserDataHolder getUserData()
@@ -54,5 +59,18 @@ public class DiscordBot extends ListenerAdapter
 
 		
 		DiscordBotLink.Logger.info("Discord bot ready!");
+	}
+
+	public BotConfig getConfig()
+	{
+		return config;
+	}
+
+	public TextChannel getLinkChannel()
+	{
+		if (linkChannel == null)
+			linkChannel = jda.getTextChannelById(config.linkChannelId());
+
+		return linkChannel;
 	}
 }

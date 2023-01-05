@@ -57,19 +57,17 @@ public class DiscordBotLink implements ModInitializer
 		File file = new File(filePath);
 		
 		BotConfig config;
-		
-		
-		
 		if (file.createNewFile())
 		{
 			Properties properties = new Properties();
 			properties.setProperty("token", "");
 			properties.setProperty("prefix", DEFAULT_PREFIX);
+			properties.setProperty("linkChannelId", "");
 			PrintWriter writer = new PrintWriter(file);
 			properties.store(writer, "Config for DiscordBotLink");
 			writer.close();
 			
-			config = new BotConfig("", DEFAULT_PREFIX);
+			config = new BotConfig("", DEFAULT_PREFIX, "");
 		}
 		else
 		{
@@ -79,9 +77,14 @@ public class DiscordBotLink implements ModInitializer
 			
 			String token = properties.getProperty("token", "");
 			String prefix = properties.getProperty("prefix", DEFAULT_PREFIX);
-			
+			String linkChannelId = properties.getProperty("linkChannelId", "");
+
 			inputStream.close();
-			config = new BotConfig(token, prefix);
+			config = new BotConfig(token, prefix, linkChannelId);
+
+			PrintWriter writer = new PrintWriter(file);
+			properties.store(writer, "Config for DiscordBotLink");
+			writer.close();
 		}
 		
 		return config;

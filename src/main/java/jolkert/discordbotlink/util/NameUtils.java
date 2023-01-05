@@ -1,6 +1,7 @@
 package jolkert.discordbotlink.util;
 
 import jolkert.discordbotlink.data.UserData;
+import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.User;
 
 public final class NameUtils
@@ -18,5 +19,13 @@ public final class NameUtils
 			return data.getDiscordData().getName();
 		else
 			return data.getRoleInfo().getNickname() + " (" + data.getDiscordData().getName() + ")";
+	}
+
+	public static String getNickname(Member member)
+	{
+		if (member.getNickname() != null)
+			return member.getNickname();
+		else
+			return member.getUser().getName();
 	}
 }
