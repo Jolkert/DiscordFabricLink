@@ -7,6 +7,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.MinecraftServer;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.security.auth.login.LoginException;
 import java.io.*;
@@ -15,7 +16,7 @@ import java.util.Properties;
 public class DiscordBotLink implements ModInitializer
 {
 	public static MinecraftServer Server;
-	public static final Logger Logger = LogUtils.getLogger();
+	public static final Logger Logger = LoggerFactory.getLogger("Discord Bot Link");
 	public static DiscordBot Bot;
 	
 	public static final String DEFAULT_PREFIX = "!";
@@ -23,7 +24,6 @@ public class DiscordBotLink implements ModInitializer
 	@Override
 	public void onInitialize()
 	{
-		
 		BotConfig botConfig = null;
 		try
 		{
