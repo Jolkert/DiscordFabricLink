@@ -55,7 +55,7 @@ public class PlayerManagerMixin
 
 	private void sendDiscordMessage(String message)
 	{
-		if (DiscordBotLink.Bot != null)
+		if (DiscordBotLink.Bot != null && DiscordBotLink.Bot.getLinkChannel() != null)
 			DiscordBotLink.Bot.getLinkChannel().sendMessage(message).queue();
 	}
 }
