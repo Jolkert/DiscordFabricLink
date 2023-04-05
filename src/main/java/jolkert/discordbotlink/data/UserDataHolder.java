@@ -81,7 +81,10 @@ public class UserDataHolder
 		if (data != null)
 		{
 			DiscordBotLink.Logger.info("Updating user info for " + NameUtils.nameWithDiscriminator(discordUser));
-			data.setRoleInfo(RoleInfo.of(discordUser));
+			if (data.getRoleInfo().pronounsAreOverridden())
+				data.setRoleInfo(RoleInfo.of(discordUser, data.getRoleInfo().getPronouns()));
+			else
+				data.setRoleInfo(RoleInfo.of(discordUser));
 		}
 		
 		writeJson();

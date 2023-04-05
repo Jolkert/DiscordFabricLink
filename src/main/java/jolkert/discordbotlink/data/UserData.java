@@ -24,7 +24,7 @@ public class UserData
 	{
 		MinecraftData minecraftData = new MinecraftData(new UUID(data.minecraftData.uuid.getMostSignificantBits(), data.minecraftData.uuid.getLeastSignificantBits()), data.minecraftData.name);
 		DiscordData discordData = new DiscordData(data.discordData.id, data.discordData.name);
-		RoleInfo roleInfo = new RoleInfo(data.roleInfo.getTopColor(), data.roleInfo.getPronouns(), data.roleInfo.getNickname());
+		RoleInfo roleInfo = new RoleInfo(data.roleInfo.getTopColor(), data.roleInfo.getPronouns(), data.roleInfo.getNickname(), data.roleInfo.pronounsAreOverridden());
 		
 		this.minecraftData = minecraftData;
 		this.discordData = discordData;

@@ -16,21 +16,27 @@ public class RoleInfo
 	private int topColor;
 	private String pronouns;
 	private String nickname;
+	private boolean pronounsAreOverridden;
 	
-	RoleInfo(int topColor, String pronouns, String nickname)
+	RoleInfo(int topColor, String pronouns, String nickname, boolean pronounsAreOverridden)
 	{
 		this.topColor = topColor;
 		this.pronouns = pronouns;
 		this.nickname = nickname;
+		this.pronounsAreOverridden = pronounsAreOverridden;
 	}
 	
 	
 	public static RoleInfo of(User discordUser)
 	{
-		return of(discordUser.getId());
+		return of(discordUser.getId(), null);
 	}
-	
-	public static RoleInfo of(String discordId)
+	public static RoleInfo of(User discordUser, String lockedPronouns)
+	{
+		return of(discordUser.getId(), lockedPronouns);
+	}
+
+	public static RoleInfo of(String discordId, String lockedPronouns)
 	{
 		Member guildUser = DiscordBotLink.Bot.primaryGuild.getMemberById(discordId);
 		if (guildUser == null)
@@ -49,17 +55,19 @@ public class RoleInfo
 			if (role.getName().matches("(?i)he/him|she/her|they/them|other"))
 				pronounRoles.add(role.getName());
 		}
-		
-		String pronouns = "";
-		if (pronounRoles.size() > 1)
-			pronounRoles.replaceAll(str -> str.split("/")[0]);
-		
-		if (pronounRoles.size() > 0)
-			pronouns = String.join("/", pronounRoles);
-		
+
+		String pronouns = lockedPronouns;
+		if (pronouns == null)
+		{
+			if (pronounRoles.size() > 1)
+				pronounRoles.replaceAll(str -> str.split("/")[0]);
+
+			if (pronounRoles.size() > 0)
+				pronouns = String.join("/", pronounRoles);
+		}
 		String nickname = guildUser.getNickname();
 		
-		return new RoleInfo(topColor, pronouns, nickname);
+		return new RoleInfo(topColor, pronouns, nickname, lockedPronouns != null);
 	}
 	
 	public int getTopColor()
@@ -75,5 +83,10 @@ public class RoleInfo
 	public String getNickname()
 	{
 		return nickname;
+	}
+
+	public boolean pronounsAreOverridden()
+	{
+		return pronounsAreOverridden;
 	}
 }
