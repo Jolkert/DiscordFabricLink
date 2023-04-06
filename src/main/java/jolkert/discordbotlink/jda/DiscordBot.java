@@ -2,6 +2,7 @@ package jolkert.discordbotlink.jda;
 
 import jolkert.discordbotlink.DiscordBotLink;
 import jolkert.discordbotlink.data.UserDataHolder;
+import jolkert.discordbotlink.jda.command.DiscordCommand;
 import jolkert.discordbotlink.jda.config.*;
 import jolkert.discordbotlink.jda.listener.CommandHandler;
 import jolkert.discordbotlink.jda.listener.LinkChannelListener;
@@ -12,6 +13,9 @@ import net.dv8tion.jda.api.entities.*;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.interactions.commands.Command;
+import net.dv8tion.jda.api.interactions.commands.OptionType;
+import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.MemberCachePolicy;
 import net.dv8tion.jda.api.utils.concurrent.Task;
@@ -39,7 +43,12 @@ public class DiscordBot extends ListenerAdapter
 				.setActivity(Activity.playing("Prefix: " + config.prefix()))
 				.setMemberCachePolicy(MemberCachePolicy.ALL)
 				.build();
-		
+
+		jda.updateCommands().addCommands(
+				Commands.slash("whitelist", "Adds a user to the Minecraft whitelist")
+						.addOption(OptionType.STRING, "username", "Your minecraft username. You can only add one Minecraft account per Discord account.")
+		).queue();
+
 		userData = new UserDataHolder(FILE_PATH);
 		this.config = config;
 	}
@@ -56,8 +65,7 @@ public class DiscordBot extends ListenerAdapter
 		
 		primaryGuild = jda.getGuilds().stream().findFirst().orElseThrow();
 		
-		Task<List<Member>> task = primaryGuild.loadMembers();
-
+		Task<List<Member>> _ignored = primaryGuild.loadMembers();
 		
 		DiscordBotLink.Logger.info("Discord bot ready!");
 	}
@@ -73,5 +81,10 @@ public class DiscordBot extends ListenerAdapter
 			linkChannel = jda.getTextChannelById(config.linkChannelId());
 
 		return linkChannel;
+	}
+
+	public JDA getJda()
+	{
+		return jda;
 	}
 }

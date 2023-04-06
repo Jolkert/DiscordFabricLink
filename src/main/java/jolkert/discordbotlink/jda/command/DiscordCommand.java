@@ -1,14 +1,20 @@
 package jolkert.discordbotlink.jda.command;
 
+import jolkert.discordbotlink.DiscordBotLink;
+import jolkert.discordbotlink.jda.DiscordBot;
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import org.jetbrains.annotations.NotNull;
 
 public abstract class DiscordCommand
 {
 	protected String name;
 	protected String[] aliases = {};
-	
+
 	public abstract void execute(String[] args, MessageReceivedEvent context);
-	
+	public abstract void executeSlashCommand(@NotNull SlashCommandInteractionEvent event);
+
 	public String[] getAllAliases()
 	{
 		if (aliases == null || aliases.length == 0)

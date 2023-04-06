@@ -5,31 +5,47 @@ import jolkert.discordbotlink.DiscordBotLink;
 import jolkert.discordbotlink.data.UserData;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
+import net.dv8tion.jda.api.events.interaction.command.GenericCommandInteractionEvent;
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.api.requests.restaction.interactions.ReplyCallbackAction;
 import net.minecraft.server.ServerConfigHandler;
 import net.minecraft.server.Whitelist;
 import net.minecraft.server.WhitelistEntry;
+import org.jetbrains.annotations.NotNull;
+import org.spongepowered.asm.mixin.injection.selectors.TargetSelector;
 
+import java.util.Objects;
 import java.util.UUID;
 
 public class WhitelistCommand extends DiscordCommand
 {
+	public static final String NAME = "whitelist";
+
 	public WhitelistCommand()
 	{
-		this.name = "whitelist";
+		this.name = NAME;
 		this.aliases = new String[]{"wl"};
 	}
 	// TODO: maybe make this accept UUIDs? idk
 	@Override
-	public void execute(String[] args, MessageReceivedEvent context)
+	public void execute(String[] args, MessageReceivedEvent event)
 	{
 		if (args.length < 2 || args[1].isBlank())
 			return;
-		
-		addToWhitelist(args[1], context);
+
+		MessageEmbed embed = addToWhitelist(args[1], CommandContext.of(event));
+		event.getChannel().sendMessageEmbeds(embed).queue();
 	}
-	
-	private void addToWhitelist(String username, MessageReceivedEvent context)
+	@Override
+	public void executeSlashCommand(@NotNull SlashCommandInteractionEvent event)
+	{
+		event.deferReply().queue();
+		MessageEmbed embed = addToWhitelist(Objects.requireNonNull(event.getOption("username")).getAsString(), CommandContext.of(event));
+		event.getHook().sendMessageEmbeds(embed).queue();
+	}
+
+	private MessageEmbed addToWhitelist(String username, CommandContext context)
 	{
 		Whitelist whitelist = DiscordBotLink.Server.getPlayerManager().getWhitelist();
 		
@@ -57,26 +73,26 @@ public class WhitelistCommand extends DiscordCommand
 			else
 			{
 				WhitelistEntry entry = new WhitelistEntry(userProfile);
-				UserData oldData = DiscordBotLink.Bot.getUserData().getUser(context.getAuthor());
+				UserData oldData = DiscordBotLink.Bot.getUserData().getUser(context.author());
 				if (oldData != null)
 				{
 					oldData = new UserData(oldData);
 					
-					UserData user = DiscordBotLink.Bot.getUserData().getUser(context.getAuthor());
+					UserData user = DiscordBotLink.Bot.getUserData().getUser(context.author());
 					GameProfile toRemove = new GameProfile(oldData.getMinecraftData().getUuid(), oldData.getMinecraftData().getName());
-					DiscordBotLink.Bot.getUserData().updateMinecraftData(context.getAuthor(), userProfile);
+					DiscordBotLink.Bot.getUserData().updateMinecraftData(context.author(), userProfile);
 					whitelist.remove(toRemove);
 				}
 				else
 				{
-					UserData userData = new UserData(userProfile, context.getAuthor());
+					UserData userData = new UserData(userProfile, context.author());
 					DiscordBotLink.Bot.getUserData().addUser(userData);
 				}
 				
 				whitelist.add(entry);
 				embed = new EmbedBuilder()
 						.setTitle("User added to whitelist!")
-						.setDescription("User **<" + username	+ ">** added to the whitelist, and linked to " + context.getAuthor().getAsMention() +
+						.setDescription("User **<" + username	+ ">** added to the whitelist, and linked to " + context.author().getAsMention() +
 								(oldData != null ? "\nReplaced **<" + oldData.getMinecraftData().getName() + ">**" : ""))
 						.setColor(0x009900)
 						.build();
@@ -84,6 +100,6 @@ public class WhitelistCommand extends DiscordCommand
 			
 		}
 		
-		context.getChannel().sendMessageEmbeds(embed).queue();
+		return embed;
 	}
 }

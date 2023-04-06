@@ -5,8 +5,10 @@ import jolkert.discordbotlink.jda.command.DiscordCommand;
 import jolkert.discordbotlink.jda.command.PingCommand;
 import jolkert.discordbotlink.jda.command.WhitelistCommand;
 import jolkert.discordbotlink.util.NameUtils;
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 
@@ -14,7 +16,7 @@ public class CommandHandler extends ListenerAdapter
 {
 	private final String prefix;
 	private final HashMap<String, DiscordCommand> commandMap;
-	private static final DiscordCommand[] COMMANDS = {new WhitelistCommand(), new PingCommand()};
+	public static final DiscordCommand[] COMMANDS = {new WhitelistCommand(), new PingCommand()};
 	
 	public CommandHandler(String prefix)
 	{
@@ -49,7 +51,16 @@ public class CommandHandler extends ListenerAdapter
 				DiscordBotLink.Logger.info("Could not find command [" + args[0] + "]");
 		}
 	}
-	
+	@Override
+	public void onSlashCommandInteraction(@NotNull SlashCommandInteractionEvent event)
+	{
+		if (!commandMap.containsKey(event.getName()))
+			return;
+
+		commandMap.get(event.getName()).executeSlashCommand(event);
+	}
+
+
 	private static boolean containsPrefix(String content, String prefix)
 	{// TODO: eventually make this check for a mention prefix too
 		return content.startsWith(prefix);
