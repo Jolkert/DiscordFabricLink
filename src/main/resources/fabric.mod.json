@@ -8,7 +8,10 @@
 	"authors": [
 		"Jolkert"
 	],
-	"contact": {},
+	"contact": {
+		"sources": "https://github.com/Jolkert/DiscordBotLink",
+		"homepage": "jolkert.github.io"
+	},
 	
 	"license": "MIT",
 	"icon": "assets/discord-bot-link/icon.png",
@@ -25,8 +28,8 @@
 	],
 	
 	"depends": {
-		"fabricloader": ">=0.14.6",
+		"fabricloader": ">=${loader_version}",
 		"fabric": "*",
-		"minecraft": "~1.19-beta.4"
+		"minecraft": "${minecraft_version}"
 	}
 }
