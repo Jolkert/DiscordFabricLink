@@ -1,6 +1,6 @@
-package jolkert.discordbotlink.data;
+package io.github.jolkert.discordbotlink.data;
 
-import jolkert.discordbotlink.DiscordBotLink;
+import io.github.jolkert.discordbotlink.DiscordBotLink;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;
 import net.dv8tion.jda.api.entities.User;

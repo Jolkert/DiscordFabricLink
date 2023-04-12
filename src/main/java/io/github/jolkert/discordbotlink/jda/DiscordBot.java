@@ -1,19 +1,18 @@
-package jolkert.discordbotlink.jda;
+package io.github.jolkert.discordbotlink.jda;
 
-import jolkert.discordbotlink.DiscordBotLink;
-import jolkert.discordbotlink.data.UserDataHolder;
-import jolkert.discordbotlink.jda.command.DiscordCommand;
-import jolkert.discordbotlink.jda.config.*;
-import jolkert.discordbotlink.jda.listener.CommandHandler;
-import jolkert.discordbotlink.jda.listener.LinkChannelListener;
-import jolkert.discordbotlink.jda.listener.UserUpdateListener;
+import io.github.jolkert.discordbotlink.DiscordBotLink;
+import io.github.jolkert.discordbotlink.data.UserDataHolder;
+import io.github.jolkert.discordbotlink.jda.config.BotConfig;
+import io.github.jolkert.discordbotlink.jda.listener.CommandHandler;
+import io.github.jolkert.discordbotlink.jda.listener.LinkChannelListener;
+import io.github.jolkert.discordbotlink.jda.listener.UserUpdateListener;
+import io.github.jolkert.discordbotlink.jda.config.*;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.*;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import net.dv8tion.jda.api.interactions.commands.Command;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.requests.GatewayIntent;

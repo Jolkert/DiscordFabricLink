@@ -1,10 +1,10 @@
-package jolkert.discordbotlink.jda.listener;
+package io.github.jolkert.discordbotlink.jda.listener;
 
-import jolkert.discordbotlink.DiscordBotLink;
-import jolkert.discordbotlink.jda.command.DiscordCommand;
-import jolkert.discordbotlink.jda.command.PingCommand;
-import jolkert.discordbotlink.jda.command.WhitelistCommand;
-import jolkert.discordbotlink.util.NameUtils;
+import io.github.jolkert.discordbotlink.jda.command.WhitelistCommand;
+import io.github.jolkert.discordbotlink.util.NameUtils;
+import io.github.jolkert.discordbotlink.DiscordBotLink;
+import io.github.jolkert.discordbotlink.jda.command.DiscordCommand;
+import io.github.jolkert.discordbotlink.jda.command.PingCommand;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;

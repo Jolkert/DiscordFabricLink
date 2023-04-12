@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "discord-bot-link",
+	"id": "discord_bot_link",
 	"version": "${version}",
 	
 	"name": "Discord Bot Link",
@@ -19,7 +19,7 @@
 	"environment": "server",
 	"entrypoints": {
 		"main": [
-			"jolkert.discordbotlink.DiscordBotLink"
+			"io.github.jolkert.discordbotlink.DiscordBotLink"
 		]
 	},
 	

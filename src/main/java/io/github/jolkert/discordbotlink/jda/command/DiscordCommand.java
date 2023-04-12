@@ -1,10 +1,7 @@
-package jolkert.discordbotlink.jda.command;
+package io.github.jolkert.discordbotlink.jda.command;
 
-import jolkert.discordbotlink.DiscordBotLink;
-import jolkert.discordbotlink.jda.DiscordBot;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class DiscordCommand

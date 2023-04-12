@@ -1,19 +1,16 @@
-package jolkert.discordbotlink.jda.command;
+package io.github.jolkert.discordbotlink.jda.command;
 
 import com.mojang.authlib.GameProfile;
-import jolkert.discordbotlink.DiscordBotLink;
-import jolkert.discordbotlink.data.UserData;
+import io.github.jolkert.discordbotlink.data.UserData;
+import io.github.jolkert.discordbotlink.DiscordBotLink;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
-import net.dv8tion.jda.api.events.interaction.command.GenericCommandInteractionEvent;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
-import net.dv8tion.jda.api.requests.restaction.interactions.ReplyCallbackAction;
 import net.minecraft.server.ServerConfigHandler;
 import net.minecraft.server.Whitelist;
 import net.minecraft.server.WhitelistEntry;
 import org.jetbrains.annotations.NotNull;
-import org.spongepowered.asm.mixin.injection.selectors.TargetSelector;
 
 import java.util.Objects;
 import java.util.UUID;

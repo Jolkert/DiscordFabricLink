@@ -1,7 +1,6 @@
-package jolkert.discordbotlink.jda.listener;
+package io.github.jolkert.discordbotlink.jda.listener;
 
-import jolkert.discordbotlink.DiscordBotLink;
-import jolkert.discordbotlink.util.NameUtils;
+import io.github.jolkert.discordbotlink.DiscordBotLink;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberRoleAddEvent;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberRoleRemoveEvent;

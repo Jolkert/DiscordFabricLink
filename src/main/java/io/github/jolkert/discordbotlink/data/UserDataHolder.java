@@ -1,10 +1,10 @@
-package jolkert.discordbotlink.data;
+package io.github.jolkert.discordbotlink.data;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mojang.authlib.GameProfile;
-import jolkert.discordbotlink.DiscordBotLink;
-import jolkert.discordbotlink.util.NameUtils;
+import io.github.jolkert.discordbotlink.DiscordBotLink;
+import io.github.jolkert.discordbotlink.util.NameUtils;
 import net.dv8tion.jda.api.entities.User;
 
 import java.io.*;

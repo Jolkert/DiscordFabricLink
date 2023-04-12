@@ -1,8 +1,7 @@
-package jolkert.discordbotlink;
+package io.github.jolkert.discordbotlink;
 
-import com.mojang.logging.LogUtils;
-import jolkert.discordbotlink.jda.DiscordBot;
-import jolkert.discordbotlink.jda.config.BotConfig;
+import io.github.jolkert.discordbotlink.jda.config.BotConfig;
+import io.github.jolkert.discordbotlink.jda.DiscordBot;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.MinecraftServer;

@@ -1,8 +1,8 @@
-package jolkert.discordbotlink.jda.listener;
+package io.github.jolkert.discordbotlink.jda.listener;
 
-import jolkert.discordbotlink.DiscordBotLink;
-import jolkert.discordbotlink.data.UserData;
-import jolkert.discordbotlink.util.NameUtils;
+import io.github.jolkert.discordbotlink.DiscordBotLink;
+import io.github.jolkert.discordbotlink.data.UserData;
+import io.github.jolkert.discordbotlink.util.NameUtils;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;

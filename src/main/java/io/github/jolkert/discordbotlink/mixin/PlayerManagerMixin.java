@@ -1,7 +1,7 @@
-package jolkert.discordbotlink.mixin;
+package io.github.jolkert.discordbotlink.mixin;
 
-import jolkert.discordbotlink.DiscordBotLink;
-import jolkert.discordbotlink.data.UserData;
+import io.github.jolkert.discordbotlink.data.UserData;
+import io.github.jolkert.discordbotlink.DiscordBotLink;
 import net.minecraft.network.message.MessageType;
 import net.minecraft.network.message.SignedMessage;
 import net.minecraft.server.PlayerManager;

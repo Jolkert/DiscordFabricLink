@@ -1,6 +1,6 @@
-package jolkert.discordbotlink.mixin;
+package io.github.jolkert.discordbotlink.mixin;
 
-import jolkert.discordbotlink.DiscordBotLink;
+import io.github.jolkert.discordbotlink.DiscordBotLink;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.dedicated.MinecraftDedicatedServer;
 import org.spongepowered.asm.mixin.Mixin;

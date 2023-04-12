@@ -1,7 +1,7 @@
-package jolkert.discordbotlink.data;
+package io.github.jolkert.discordbotlink.data;
 
 import com.mojang.authlib.GameProfile;
-import jolkert.discordbotlink.util.NameUtils;
+import io.github.jolkert.discordbotlink.util.NameUtils;
 import net.dv8tion.jda.api.entities.User;
 
 import java.util.UUID;
