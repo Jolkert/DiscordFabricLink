@@ -1,6 +1,6 @@
 package io.github.jolkert.discordbotlink.data;
 
-import io.github.jolkert.discordbotlink.DiscordBotLink;
+import io.github.jolkert.discordbotlink.DiscordBotLink_LEGACY;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;
 import net.dv8tion.jda.api.entities.User;
@@ -38,7 +38,7 @@ public class RoleInfo
 
 	public static RoleInfo of(String discordId, String lockedPronouns)
 	{
-		Member guildUser = DiscordBotLink.Bot.primaryGuild.getMemberById(discordId);
+		Member guildUser = DiscordBotLink_LEGACY.Bot.primaryGuild.getMemberById(discordId);
 		if (guildUser == null)
 			System.out.println("guildUser is NULL!");
 		

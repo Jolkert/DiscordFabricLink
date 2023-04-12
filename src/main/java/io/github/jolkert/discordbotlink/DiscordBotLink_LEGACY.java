@@ -12,7 +12,7 @@ import javax.security.auth.login.LoginException;
 import java.io.*;
 import java.util.Properties;
 
-public class DiscordBotLink implements ModInitializer
+public class DiscordBotLink_LEGACY implements ModInitializer
 {
 	public static MinecraftServer Server;
 	public static final Logger Logger = LoggerFactory.getLogger("Discord Bot Link");

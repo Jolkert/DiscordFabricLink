@@ -1,7 +1,7 @@
 package io.github.jolkert.discordbotlink.mixin;
 
+import io.github.jolkert.discordbotlink.DiscordBotLink_LEGACY;
 import io.github.jolkert.discordbotlink.data.UserData;
-import io.github.jolkert.discordbotlink.DiscordBotLink;
 import net.minecraft.network.message.MessageType;
 import net.minecraft.network.message.SignedMessage;
 import net.minecraft.server.PlayerManager;
@@ -23,7 +23,7 @@ public class PlayerManagerMixin
 			ordinal = 0)
 	public MessageType.Parameters addHoverTextToSender(MessageType.Parameters params, SignedMessage message)
 	{
-		UserData data = DiscordBotLink.Bot.getUserData().getUser(message.getSender());
+		UserData data = DiscordBotLink_LEGACY.Bot.getUserData().getUser(message.getSender());
 		if (data == null)
 			return params;
 
@@ -55,7 +55,7 @@ public class PlayerManagerMixin
 
 	private void sendDiscordMessage(String message)
 	{
-		if (DiscordBotLink.Bot != null && DiscordBotLink.Bot.getLinkChannel() != null)
-			DiscordBotLink.Bot.getLinkChannel().sendMessage(message).queue();
+		if (DiscordBotLink_LEGACY.Bot != null && DiscordBotLink_LEGACY.Bot.getLinkChannel() != null)
+			DiscordBotLink_LEGACY.Bot.getLinkChannel().sendMessage(message).queue();
 	}
 }

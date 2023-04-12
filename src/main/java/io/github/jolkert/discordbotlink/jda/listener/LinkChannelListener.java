@@ -1,6 +1,6 @@
 package io.github.jolkert.discordbotlink.jda.listener;
 
-import io.github.jolkert.discordbotlink.DiscordBotLink;
+import io.github.jolkert.discordbotlink.DiscordBotLink_LEGACY;
 import io.github.jolkert.discordbotlink.data.UserData;
 import io.github.jolkert.discordbotlink.util.NameUtils;
 import net.dv8tion.jda.api.Permission;
@@ -18,11 +18,11 @@ public class LinkChannelListener extends ListenerAdapter
 	@Override
 	public void onMessageReceived(MessageReceivedEvent event)
 	{
-		if (event.getAuthor().isBot() || event.getAuthor().isSystem() || !event.getChannel().getId().equals(DiscordBotLink.Bot.getConfig().linkChannelId()))
+		if (event.getAuthor().isBot() || event.getAuthor().isSystem() || !event.getChannel().getId().equals(DiscordBotLink_LEGACY.Bot.getConfig().linkChannelId()))
 			return;
 
 		String message = event.getMessage().getContentRaw();
-		MinecraftServer server = DiscordBotLink.Server;
+		MinecraftServer server = DiscordBotLink_LEGACY.Server;
 		if (message.startsWith(COMMAND_PREFIX) && Objects.requireNonNull(event.getMember()).hasPermission(Permission.MANAGE_SERVER))
 		{
 			server.sendMessage(Text.of(NameUtils.nameWithDiscriminator(event.getAuthor()) + ": " + message));
@@ -30,7 +30,7 @@ public class LinkChannelListener extends ListenerAdapter
 		}
 		else
 		{
-			UserData author = DiscordBotLink.Bot.getUserData().getUser(event.getAuthor().getId());
+			UserData author = DiscordBotLink_LEGACY.Bot.getUserData().getUser(event.getAuthor().getId());
 			MutableText senderText = MutableText.of(new LiteralTextContent(NameUtils.getNickname(Objects.requireNonNull(event.getMember()))))
 					.setStyle(Style.EMPTY
 							.withColor(author.getRoleInfo().getTopColor())

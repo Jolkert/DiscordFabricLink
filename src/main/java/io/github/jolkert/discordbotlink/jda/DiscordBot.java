@@ -1,12 +1,11 @@
 package io.github.jolkert.discordbotlink.jda;
 
-import io.github.jolkert.discordbotlink.DiscordBotLink;
+import io.github.jolkert.discordbotlink.DiscordBotLink_LEGACY;
 import io.github.jolkert.discordbotlink.data.UserDataHolder;
 import io.github.jolkert.discordbotlink.jda.config.BotConfig;
 import io.github.jolkert.discordbotlink.jda.listener.CommandHandler;
 import io.github.jolkert.discordbotlink.jda.listener.LinkChannelListener;
 import io.github.jolkert.discordbotlink.jda.listener.UserUpdateListener;
-import io.github.jolkert.discordbotlink.jda.config.*;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.*;
@@ -66,7 +65,7 @@ public class DiscordBot extends ListenerAdapter
 		
 		Task<List<Member>> _ignored = primaryGuild.loadMembers();
 		
-		DiscordBotLink.Logger.info("Discord bot ready!");
+		DiscordBotLink_LEGACY.Logger.info("Discord bot ready!");
 	}
 
 	public BotConfig getConfig()

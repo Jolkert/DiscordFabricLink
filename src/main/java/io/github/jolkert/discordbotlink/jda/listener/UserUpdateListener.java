@@ -1,6 +1,6 @@
 package io.github.jolkert.discordbotlink.jda.listener;
 
-import io.github.jolkert.discordbotlink.DiscordBotLink;
+import io.github.jolkert.discordbotlink.DiscordBotLink_LEGACY;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberRoleAddEvent;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberRoleRemoveEvent;
@@ -33,18 +33,18 @@ public class UserUpdateListener extends ListenerAdapter
 	public void onUserUpdateName(UserUpdateNameEvent event)
 	{
 		updateRoleInformation(event.getUser());
-		DiscordBotLink.Bot.getUserData().updateDiscordData(event.getUser());
+		DiscordBotLink_LEGACY.Bot.getUserData().updateDiscordData(event.getUser());
 	}
 	
 	@Override
 	public void onUserUpdateDiscriminator(UserUpdateDiscriminatorEvent event)
 	{
 		updateRoleInformation(event.getUser());
-		DiscordBotLink.Bot.getUserData().updateDiscordData(event.getUser());
+		DiscordBotLink_LEGACY.Bot.getUserData().updateDiscordData(event.getUser());
 	}
 	
 	public void updateRoleInformation(User user)
 	{
-		DiscordBotLink.Bot.getUserData().updateRoleInfo(user);
+		DiscordBotLink_LEGACY.Bot.getUserData().updateRoleInfo(user);
 	}
 }

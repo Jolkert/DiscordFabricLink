@@ -3,7 +3,7 @@ package io.github.jolkert.discordbotlink.data;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mojang.authlib.GameProfile;
-import io.github.jolkert.discordbotlink.DiscordBotLink;
+import io.github.jolkert.discordbotlink.DiscordBotLink_LEGACY;
 import io.github.jolkert.discordbotlink.util.NameUtils;
 import net.dv8tion.jda.api.entities.User;
 
@@ -80,7 +80,7 @@ public class UserDataHolder
 		UserData data = getUser(discordUser);
 		if (data != null)
 		{
-			DiscordBotLink.Logger.info("Updating user info for " + NameUtils.nameWithDiscriminator(discordUser));
+			DiscordBotLink_LEGACY.Logger.info("Updating user info for " + NameUtils.nameWithDiscriminator(discordUser));
 			if (data.getRoleInfo().pronounsAreOverridden())
 				data.setRoleInfo(RoleInfo.of(discordUser, data.getRoleInfo().getPronouns()));
 			else
@@ -101,7 +101,7 @@ public class UserDataHolder
 		}
 		catch (FileNotFoundException exception)
 		{
-			DiscordBotLink.Logger.error("COULD NOT FIND FILE " + dataFile.getPath(), exception);
+			DiscordBotLink_LEGACY.Logger.error("COULD NOT FIND FILE " + dataFile.getPath(), exception);
 		}
 	}
 	
@@ -129,7 +129,7 @@ public class UserDataHolder
 		}
 		catch (IOException exception)
 		{
-			DiscordBotLink.Logger.error("COULD NOT READ FILE " + dataFile.getPath(), exception);
+			DiscordBotLink_LEGACY.Logger.error("COULD NOT READ FILE " + dataFile.getPath(), exception);
 		}
 	}
 }

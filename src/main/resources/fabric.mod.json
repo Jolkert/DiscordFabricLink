@@ -30,6 +30,7 @@
 	"depends": {
 		"fabricloader": ">=${loader_version}",
 		"fabric": "*",
+		"fabric-language-kotlin": "*",
 		"minecraft": "${minecraft_version}"
 	}
 }

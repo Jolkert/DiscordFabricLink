@@ -1,8 +1,8 @@
 package io.github.jolkert.discordbotlink.jda.command;
 
 import com.mojang.authlib.GameProfile;
+import io.github.jolkert.discordbotlink.DiscordBotLink_LEGACY;
 import io.github.jolkert.discordbotlink.data.UserData;
-import io.github.jolkert.discordbotlink.DiscordBotLink;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
@@ -44,11 +44,11 @@ public class WhitelistCommand extends DiscordCommand
 
 	private MessageEmbed addToWhitelist(String username, CommandContext context)
 	{
-		Whitelist whitelist = DiscordBotLink.Server.getPlayerManager().getWhitelist();
+		Whitelist whitelist = DiscordBotLink_LEGACY.Server.getPlayerManager().getWhitelist();
 		
 		MessageEmbed embed;
-		DiscordBotLink.Logger.info("Adding [" + username + "] to the whitelist");
-		UUID uuid = ServerConfigHandler.getPlayerUuidByName(DiscordBotLink.Server, username);
+		DiscordBotLink_LEGACY.Logger.info("Adding [" + username + "] to the whitelist");
+		UUID uuid = ServerConfigHandler.getPlayerUuidByName(DiscordBotLink_LEGACY.Server, username);
 		if (uuid == null)
 		{
 			embed = new EmbedBuilder()
@@ -70,20 +70,20 @@ public class WhitelistCommand extends DiscordCommand
 			else
 			{
 				WhitelistEntry entry = new WhitelistEntry(userProfile);
-				UserData oldData = DiscordBotLink.Bot.getUserData().getUser(context.author());
+				UserData oldData = DiscordBotLink_LEGACY.Bot.getUserData().getUser(context.author());
 				if (oldData != null)
 				{
 					oldData = new UserData(oldData);
 					
-					UserData user = DiscordBotLink.Bot.getUserData().getUser(context.author());
+					UserData user = DiscordBotLink_LEGACY.Bot.getUserData().getUser(context.author());
 					GameProfile toRemove = new GameProfile(oldData.getMinecraftData().getUuid(), oldData.getMinecraftData().getName());
-					DiscordBotLink.Bot.getUserData().updateMinecraftData(context.author(), userProfile);
+					DiscordBotLink_LEGACY.Bot.getUserData().updateMinecraftData(context.author(), userProfile);
 					whitelist.remove(toRemove);
 				}
 				else
 				{
 					UserData userData = new UserData(userProfile, context.author());
-					DiscordBotLink.Bot.getUserData().addUser(userData);
+					DiscordBotLink_LEGACY.Bot.getUserData().addUser(userData);
 				}
 				
 				whitelist.add(entry);
