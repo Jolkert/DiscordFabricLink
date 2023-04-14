@@ -19,7 +19,10 @@
 	"environment": "server",
 	"entrypoints": {
 		"main": [
-			"io.github.jolkert.discordbotlink.DiscordBotLink"
+			{
+				"adapter": "kotlin",
+				"value": "io.github.jolkert.discordbotlink.DiscordBotLink"
+			}
 		]
 	},
 	
