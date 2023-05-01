@@ -45,41 +45,72 @@ class WhitelistCommand : Command()
 		event.hook.sendMessageEmbeds(addToWhitelist(user, CommandContext.of(event)).toEmbed()).queue()
 	}
 
-	private fun addToWhitelist(username: String, context: CommandContext): WhitelistAddResult
+
+	class WhitelistAddResult(val type: ResultType, val username: String, val replacedUser: String? = null)
 	{
-		val whitelist = DiscordBotLink.Server.playerManager.whitelist
 
-		LOGGER.info("Attempting to add <$username> to the whitelist")
-		val uuid = ServerConfigHandler.getPlayerUuidByName(DiscordBotLink.Server, username)
-			?: return WhitelistAddResult.USER_NOT_FOUND
 
-		val userProfile = GameProfile(uuid, username)
-		if (whitelist.isAllowed(userProfile))
-			return WhitelistAddResult.USER_ALREADY_WHITELISTED
-
-		val oldData = DiscordBotLink.users[context.author.id]
-		if (oldData == null)
-			DiscordBotLink.users.add(UserData(userProfile, context.authorAsMember!!))
-		else
+		enum class ResultType
 		{
-			whitelist.remove(oldData.minecraftData.toGameProfile())
-			DiscordBotLink.users[oldData.uuid] =
-				UserData(oldData, minecraftData = UserData.MinecraftUserData(userProfile))
+			SUCCESS,
+			USER_ALREADY_WHITELISTED,
+			USER_NOT_FOUND
+		}
+	}
+
+
+
+	companion object
+	{
+		fun addToWhitelist(username: String, context: CommandContext): WhitelistAddResult
+		{
+			val whitelist = DiscordBotLink.Server.playerManager.whitelist
+
+			LOGGER.info("Attempting to add <$username> to the whitelist")
+			val uuid = ServerConfigHandler.getPlayerUuidByName(DiscordBotLink.Server, username)
+				?: return WhitelistAddResult(WhitelistAddResult.ResultType.USER_NOT_FOUND, username)
+
+			val userProfile = GameProfile(uuid, username)
+			if (whitelist.isAllowed(userProfile))
+				return WhitelistAddResult(WhitelistAddResult.ResultType.USER_ALREADY_WHITELISTED, username)
+
+			val oldData = DiscordBotLink.users[context.author.id]
+			if (oldData == null)
+				DiscordBotLink.users.add(UserData(userProfile, context.authorAsMember!!))
+			else
+			{
+				whitelist.remove(oldData.minecraftData.toGameProfile())
+				DiscordBotLink.users[oldData.uuid] =
+					UserData(oldData, minecraftData = UserData.MinecraftUserData(userProfile))
+			}
+
+			whitelist.add(WhitelistEntry(userProfile))
+			return WhitelistAddResult(WhitelistAddResult.ResultType.SUCCESS, username, oldData?.minecraftData?.username)
 		}
 
-		whitelist.add(WhitelistEntry(userProfile))
-		return WhitelistAddResult.SUCCESS
-	}
+		fun WhitelistAddResult.toEmbed(): MessageEmbed
+		{
+			return EmbedBuilder().apply {
+				(when (type)
+				{
+					WhitelistAddResult.ResultType.SUCCESS -> setTitle("Success!")
+						.setDescription("Successfully added user **<$username>**".let {
+							if (replacedUser == null)
+								return@let it
+							else
+								return@let "$it\nReplaced *<$replacedUser>*"
+						})
+						.setColor(0x00ff00)
 
-	private fun WhitelistAddResult.toEmbed(): MessageEmbed
-	{
-		return EmbedBuilder().setTitle("This is a test").setDescription("Testing but in kotlin!").build()
-	}
+					WhitelistAddResult.ResultType.USER_ALREADY_WHITELISTED -> setTitle("Already Whitelisted!")
+						.setDescription("Sorry, **<$username>** is already on the whitelist!")
+						.setColor(0xff0000)
 
-	private enum class WhitelistAddResult
-	{
-		SUCCESS,
-		USER_ALREADY_WHITELISTED,
-		USER_NOT_FOUND
+					WhitelistAddResult.ResultType.USER_NOT_FOUND -> setTitle("User Not Found!")
+						.setDescription("No Minecraft account with the name **<$username>** was found!\nDouble check the spelling of your username!")
+						.setColor(0xff0000)
+				})
+			}.build()
+		}
 	}
 }

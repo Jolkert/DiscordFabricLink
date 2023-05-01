@@ -4,6 +4,7 @@ import net.dv8tion.jda.api.entities.Guild
 import net.dv8tion.jda.api.entities.Message
 import net.dv8tion.jda.api.entities.User
 import net.dv8tion.jda.api.entities.channel.unions.MessageChannelUnion
+import net.dv8tion.jda.api.events.interaction.ModalInteractionEvent
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 
@@ -20,6 +21,10 @@ data class CommandContext(val guild: Guild?, val channel: MessageChannelUnion, v
 
 		@JvmStatic
 		fun of(event: SlashCommandInteractionEvent): CommandContext =
+			CommandContext(event.guild, event.channel, event.user, null)
+
+		@JvmStatic
+		fun of(event: ModalInteractionEvent): CommandContext =
 			CommandContext(event.guild, event.channel, event.user, null)
 	}
 }

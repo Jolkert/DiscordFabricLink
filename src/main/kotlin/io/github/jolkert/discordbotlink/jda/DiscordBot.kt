@@ -1,6 +1,7 @@
 package io.github.jolkert.discordbotlink.jda
 
 import io.github.jolkert.discordbotlink.DiscordBotLink.LOGGER
+import io.github.jolkert.discordbotlink.jda.command.WhitelistButtonCommand
 import io.github.jolkert.discordbotlink.jda.data.BotConfig
 import io.github.jolkert.discordbotlink.jda.listener.CommandHandler
 import io.github.jolkert.discordbotlink.jda.listener.LinkChannelListener
@@ -18,7 +19,7 @@ import net.dv8tion.jda.api.utils.MemberCachePolicy
 class DiscordBot(private val config: BotConfig) : ListenerAdapter()
 {
 	private val jda = JDABuilder.createLight(config.token, GatewayIntent.getIntents(GatewayIntent.ALL_INTENTS))
-		.addEventListeners(this, CommandHandler(config.commandPrefix), UserUpdateListener, LinkChannelListener)
+		.addEventListeners(this, CommandHandler(config.commandPrefix), UserUpdateListener, LinkChannelListener, WhitelistButtonCommand.Companion.ButtonListener)
 		.setActivity(Activity.playing("Prefix: ${config.commandPrefix}"))
 		.setMemberCachePolicy(MemberCachePolicy.ALL)
 		.build()
