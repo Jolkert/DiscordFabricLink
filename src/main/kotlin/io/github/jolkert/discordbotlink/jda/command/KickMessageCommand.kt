@@ -22,22 +22,16 @@ class KickMessageCommand : Command()
 			true
 		)
 
-	override fun executeTextCommand(event: MessageReceivedEvent, vararg args: String)
-	{
-		if (args.size < 2 || args[1].isBlank())
-			return
-
-		setKickMessage(args[1])
-	}
+	override fun executeTextCommand(event: MessageReceivedEvent, vararg args: String) { }
 	override fun executeSlashCommand(event: SlashCommandInteractionEvent)
 	{
-		setKickMessage(event.getOption("message")!!.asString)
-		event.reply("Updated kick message!").queue()
+		val message = event.getOption("message")!!.asString
+		setKickMessage(message)
+		event.reply("Updated kick message to `$message`!").setEphemeral(true).queue()
 	}
 
 	private fun setKickMessage(message: String)
 	{
 		DiscordBotLink.Bot.kickMessage = Text.literal(message)
-
 	}
 }
