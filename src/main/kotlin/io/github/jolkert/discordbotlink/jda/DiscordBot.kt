@@ -1,6 +1,10 @@
 package io.github.jolkert.discordbotlink.jda
 
+import io.github.jolkert.discordbotlink.DiscordBotLink
+import io.github.jolkert.discordbotlink.DiscordBotLink.CONFIG_FILE
 import io.github.jolkert.discordbotlink.DiscordBotLink.LOGGER
+import io.github.jolkert.discordbotlink.extension.pascalToSnake
+import io.github.jolkert.discordbotlink.extension.pascalToTitle
 import io.github.jolkert.discordbotlink.jda.command.WhitelistButtonCommand
 import io.github.jolkert.discordbotlink.jda.data.BotConfig
 import io.github.jolkert.discordbotlink.jda.listener.CommandHandler
@@ -15,6 +19,8 @@ import net.dv8tion.jda.api.events.session.ReadyEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
 import net.dv8tion.jda.api.requests.GatewayIntent
 import net.dv8tion.jda.api.utils.MemberCachePolicy
+import net.minecraft.text.MutableText
+import net.minecraft.text.Text
 
 class DiscordBot(private val config: BotConfig) : ListenerAdapter()
 {
@@ -31,6 +37,18 @@ class DiscordBot(private val config: BotConfig) : ListenerAdapter()
 
 	val self: User
 		get() = jda.selfUser
+
+	var kickMessage: MutableText = if (config.kickMessage.isNotEmpty()) Text.literal(config.kickMessage) else Text.translatable("multiplayer.disconnect.not_whitelisted")
+		set(value)
+		{
+			field = value
+			config.toProperties().apply {
+				setProperty(BotConfig::kickMessage.name.pascalToSnake(), value.string)
+				CONFIG_FILE.printWriter().also {
+					store(it, "Config for ${this::class.simpleName!!.pascalToTitle()}")
+				}.close()
+			}
+		}
 
 	override fun onReady(event: ReadyEvent)
 	{

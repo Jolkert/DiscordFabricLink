@@ -11,7 +11,6 @@ import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents
 import net.fabricmc.loader.api.FabricLoader
 import net.minecraft.server.MinecraftServer
-import org.apache.logging.log4j.core.jmx.Server
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import java.io.File
@@ -22,8 +21,8 @@ import java.util.*
 
 object DiscordBotLink : ModInitializer
 {
-	@JvmStatic val LOGGER: Logger = LoggerFactory.getLogger(DiscordBotLink::class.simpleName!!.pascalToTitle())
-	private val DEFAULT_CONFIG = BotConfig("0", "!", "0")
+	@JvmStatic val LOGGER = LoggerFactory.getLogger(DiscordBotLink::class.simpleName!!.pascalToTitle())
+	@JvmStatic val CONFIG_FILE = File("${FabricLoader.getInstance().configDir}/${this::class.simpleName!!.pascalToSnake()}.properties")
 
 	lateinit var Bot: DiscordBot private set
 	lateinit var Server: MinecraftServer private set
@@ -57,24 +56,23 @@ object DiscordBotLink : ModInitializer
 	{
 		try
 		{
-			val file =
-				File("${FabricLoader.getInstance().configDir}/${this::class.simpleName!!.pascalToSnake()}.properties")
+			if (!CONFIG_FILE.createNewFile())
+			{
+				BotConfig.fromProperties(Properties().apply { FileInputStream(CONFIG_FILE).also { load(it) }.close() }).let {
+					PrintWriter(CONFIG_FILE).also { writer ->
+						it.toProperties().store(writer, "Config for ${this::class.simpleName!!.pascalToTitle()}")
+					}.close()
 
-			if (!file.createNewFile())
-				return BotConfig.fromProperties(Properties().apply { FileInputStream(file).also { load(it) }.close() })
+					return it
+				}
+			}
 			else
 			{
-				val properties = Properties().apply {
-					setProperty(BotConfig::token.name.pascalToSnake(), DEFAULT_CONFIG.token)
-					setProperty(BotConfig::commandPrefix.name.pascalToSnake(), DEFAULT_CONFIG.commandPrefix)
-					setProperty(BotConfig::linkChannelId.name.pascalToSnake(), DEFAULT_CONFIG.linkChannelId)
-				}
-
-				PrintWriter(file).also {
-					properties.store(it, "Config for ${this::class.simpleName!!.pascalToTitle()}")
+				PrintWriter(CONFIG_FILE).also {
+					BotConfig.DEFAULT.toProperties().store(it, "Config for ${this::class.simpleName!!.pascalToTitle()}")
 				}.close()
 
-				return DEFAULT_CONFIG
+				return BotConfig.DEFAULT
 			}
 		} catch (exception: IOException)
 		{
@@ -86,9 +84,10 @@ object DiscordBotLink : ModInitializer
 
 	private fun BotConfig.Companion.fromProperties(properties: Properties): BotConfig = properties.let {
 		BotConfig(
-			it.getProperty(BotConfig::token.name.pascalToSnake(), DEFAULT_CONFIG.token),
-			it.getProperty(BotConfig::commandPrefix.name.pascalToSnake(), DEFAULT_CONFIG.commandPrefix),
-			it.getProperty(BotConfig::linkChannelId.name.pascalToSnake(), DEFAULT_CONFIG.linkChannelId)
+			it.getProperty(BotConfig::token.name.pascalToSnake(), BotConfig.DEFAULT.token),
+			it.getProperty(BotConfig::commandPrefix.name.pascalToSnake(), BotConfig.DEFAULT.commandPrefix),
+			it.getProperty(BotConfig::linkChannelId.name.pascalToSnake(), BotConfig.DEFAULT.linkChannelId),
+			it.getProperty(BotConfig::kickMessage.name.pascalToSnake(), BotConfig.DEFAULT.kickMessage)
 		)
 	}
 }

@@ -1,5 +1,7 @@
 package io.github.jolkert.discordbotlink.mixin;
 
+import com.mojang.authlib.GameProfile;
+import io.github.jolkert.discordbotlink.DiscordBotLink;
 import io.github.jolkert.discordbotlink.mixinkotlin.KotlinMixinImplementation;
 import net.minecraft.network.message.MessageType;
 import net.minecraft.network.message.SignedMessage;
@@ -7,10 +9,11 @@ import net.minecraft.server.PlayerManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
+import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.net.SocketAddress;
 
 @Mixin(PlayerManager.class)
 public class PlayerManagerMixin
@@ -44,4 +47,14 @@ public class PlayerManagerMixin
 		KotlinMixinImplementation.PlayerManager$broadcastChatToDiscord(message);
 	}
 
+	@Inject(
+			method = "checkCanJoin",
+			slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/server/PlayerManager;isWhitelisted(Lcom/mojang/authlib/GameProfile;)Z")),
+			at = @At(value = "RETURN", ordinal = 0),
+			cancellable = true
+	)
+	public void changeKickMessage(SocketAddress address, GameProfile profile, CallbackInfoReturnable<Text> cir)
+	{
+		cir.setReturnValue(DiscordBotLink.INSTANCE.getBot().getKickMessage());
+	}
 }
