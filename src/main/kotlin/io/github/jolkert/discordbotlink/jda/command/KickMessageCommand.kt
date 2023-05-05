@@ -1,8 +1,10 @@
 package io.github.jolkert.discordbotlink.jda.command
 
 import io.github.jolkert.discordbotlink.DiscordBotLink
+import net.dv8tion.jda.api.Permission
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
+import net.dv8tion.jda.api.interactions.commands.DefaultMemberPermissions
 import net.dv8tion.jda.api.interactions.commands.OptionType
 import net.dv8tion.jda.api.interactions.commands.build.Commands
 import net.dv8tion.jda.api.interactions.commands.build.SlashCommandData
@@ -21,6 +23,7 @@ class KickMessageCommand : Command()
 			"The message to be shown when a player is kicked for not being on the whitelist",
 			true
 		)
+		.setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.MANAGE_SERVER))
 
 	override fun executeTextCommand(event: MessageReceivedEvent, vararg args: String) { }
 	override fun executeSlashCommand(event: SlashCommandInteractionEvent)

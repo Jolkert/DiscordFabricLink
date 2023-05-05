@@ -41,7 +41,7 @@ class WhitelistCommand : Command()
 	{
 		val user = event.getOption("username")!!.asString
 
-		event.deferReply().queue()
+		event.deferReply().setEphemeral(true).queue()
 		event.hook.sendMessageEmbeds(addToWhitelist(user, CommandContext.of(event)).toEmbed()).queue()
 	}
 
